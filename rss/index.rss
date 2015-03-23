@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Web operations and all all all</title><description>Всего понемногу</description><link>http://dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Mon, 23 Mar 2015 20:20:34 GMT</lastBuildDate><atom:link href="http://dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Первый день на новом маке</title><description>&lt;p&gt;Наконец-то сбылась мечта идиота, и я стал флегматичным обладателем цельного куска анодированного аллюминия с примесями стекла. До этого уже успешно использовался хакинтош, построенный на гигабайтовской материнке, так что никаких проблем с переходом не ожидалось. На мак я перешел с винды по простой причине - для админства мне сейчас гораздо удобнее использовать *nix системы, а убунта, несмотря на ее юзабельность, проигрывает по части окружения. Нет в линуксе ни evernote, ни нормального скайпа. Там вообще для гуи мало чего путного. Мак, в свою очередь, тоже не лишен идиотизма и "оригинальных" решений. Однако же, по сравнению с той же убунтой, он много няшнее.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Web operations and all all all</title><description>Всего понемногу</description><link>http://dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Mon, 23 Mar 2015 20:58:42 GMT</lastBuildDate><atom:link href="http://dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Первый день на новом маке</title><description>&lt;p&gt;Наконец-то сбылась мечта идиота, и я стал флегматичным обладателем цельного куска анодированного аллюминия с примесями стекла. До этого уже успешно использовался хакинтош, построенный на гигабайтовской материнке, так что никаких проблем с переходом не ожидалось. На мак я перешел с винды по простой причине - для админства мне сейчас гораздо удобнее использовать *nix системы, а убунта, несмотря на ее юзабельность, проигрывает по части окружения. Нет в линуксе ни evernote, ни нормального скайпа. Там вообще для гуи мало чего путного. Мак, в свою очередь, тоже не лишен идиотизма и "оригинальных" решений. Однако же, по сравнению с той же убунтой, он много няшнее.&lt;/p&gt;
 
 &lt;p&gt;Итак, сразу после установки обновлений, я принялся настраивать систему. Что было сделано:&lt;/p&gt;
 
@@ -6,21 +6,21 @@
 &lt;li&gt;поменял хостнейм на нормальный. За каким-то чудом, мощный и брутальный MacBook Pro решил обозвать себя в консоли не иначе, как "air-ekaterina.office". Я, конечно, понимаю, что бук, скорее всего, был сбит с толку наглым DHCP сервером, но менять свое имя на Катю я как-то не спешил. Поэтому пришлось нагуглить, как поменять хостнейм в маке. Как выяснилось, линуксовый прием "поменяй хост в файлике" тут не прокатывает.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;sudo scutil --set HostName ddr-pro.local  
+&lt;pre&gt;&lt;code class="language-prettyprint lang-bash"&gt;sudo scutil --set HostName ddr-pro.local  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;поставил Homebrew (&lt;a href="http://brew.sh/"&gt;http://brew.sh/&lt;/a&gt;). Офигенная система портов. С помощью нее на маке появляется много милых и знакомых сисадмину утилит.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
+&lt;pre&gt;&lt;code class="language-prettyprint lang-bash"&gt;ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
 &lt;li&gt;с помощью брю поставил кучку полезняшек&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;brew doctor  
+&lt;pre&gt;&lt;code class="language-prettyprint lang-bash"&gt;brew doctor  
 brew install htop mc nmap bash boot2docker  
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -28,7 +28,7 @@ brew install htop mc nmap bash boot2docker
 &lt;li&gt;с башем тоже пришлось немного подвигаться, чтобы поменять комплектный маковский баш на более свежий&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;$ echo $BASH_VERSION
+&lt;pre&gt;&lt;code class="language-prettyprint lang-bash"&gt;$ echo $BASH_VERSION
 3.2.51(1)-release
 
 echo "/usr/local/bin/bash" | sudo tee -a /etc/shells  
