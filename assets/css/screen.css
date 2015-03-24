@@ -907,7 +907,7 @@ body.nav-opened .menu-button .word {
 .post {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    max-width: 900px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
@@ -1172,7 +1172,7 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65vh;
+    height: 50vh;
     min-height: 180px;
 }
 
