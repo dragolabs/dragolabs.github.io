@@ -1,4 +1,228 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configurtion Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Tue, 24 Mar 2015 17:25:16 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Первый день на новом маке</title><description>&lt;img src="https://farm4.staticflickr.com/3907/14444161651_59abed46f0_h.jpg" alt="Первый день на новом маке"&gt;&lt;p&gt;Наконец-то сбылась мечта идиота, и я стал флегматичным обладателем цельного куска анодированного аллюминия с примесями стекла. До этого уже успешно использовался хакинтош, построенный на гигабайтовской материнке, так что никаких проблем с переходом не ожидалось. На мак я перешел с винды по простой причине - для админства мне сейчас гораздо удобнее использовать *nix системы, а убунта, несмотря на ее юзабельность, проигрывает по части окружения. Нет в линуксе ни evernote, ни нормального скайпа. Там вообще для гуи мало чего путного. Мак, в свою очередь, тоже не лишен идиотизма и "оригинальных" решений. Однако же, по сравнению с той же убунтой, он много няшнее.&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configuration Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Wed, 25 Mar 2015 12:18:42 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Блог на Ghost</title><description>&lt;p&gt;С блогами у меня всегда что-то не получалось — то лень, то страшный, то неудобный. Я пробовал и &lt;a href="http://dragolabs.livejournal.com"&gt;ЖЖ&lt;/a&gt;, и &lt;a href="http://dragolabs.tumblr.com/"&gt;тумблер&lt;/a&gt;, и даже &lt;a href="http://blogspot.com"&gt;blogspot&lt;/a&gt;. Потом наткнулся на octopress, который сразу понравился своим минимализмом. Он красив, шустр, можно размещать на халявном GitHub Pages. Но он давно не обновлялся и немного загонен. Не так сильно, как его предок Jekyll, но все же кодерских действий в нем, как в обычном проекте. &lt;/p&gt;
+
+&lt;p&gt;Так что с блогами у меня не вязалось. Но сохранять описания своих действий все же хочется, поэтому я снова вдарился в поиски. В критериях были простота, удобство и поддержка markdown. Тут-то я наткнулся на &lt;a href="http://ghost.org"&gt;Ghost&lt;/a&gt;. Поднимается он легко, базу особо не требует. А тут еще нашел генератор статики из него, чтобы можно было заливать сайт на гитхаб. Он мне так понравился, что теперь мы даже используем его в админском отделе в качестве хранилища документации. Множество википедий у нас не шло так же, как у меня блог сервисы. Ниже опишу основные моменты, с которыми я имел дело при настройке.&lt;/p&gt;
+
+&lt;h4 id=""&gt;Установка&lt;/h4&gt;
+
+&lt;p&gt;На машине достаточно установленного nodejs (и MySQL\PostgreSQL, если нужна тяжелая база)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;качаем архив с движком с &lt;a href="https://ghost.org/download/"&gt;https://ghost.org/download/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;разархивируем его, куда надо&lt;/li&gt;
+&lt;li&gt;ставим нужные модули &lt;code&gt;npm install --production&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;запускаем дев окружение &lt;code&gt;npm start&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;в браузере открываем &lt;a href="http://localhost:2368"&gt;http://localhost:2368&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;для доступа в админку ломимся в &lt;a href="http://localhost:2368/ghost"&gt;http://localhost:2368/ghost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;profit!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;ddr@Vitalys-MacBook-Pro /tmp/blog $ wget https://ghost.org/zip/ghost-0.5.10.zip
+
+ddr@Vitalys-MacBook-Pro /tmp/blog $ unzip ghost-0.5.10.zip -d ghost
+
+ddr@Vitalys-MacBook-Pro /tmp/blog $ cd ghost
+
+ddr@Vitalys-MacBook-Pro /tmp/blog/ghost $ npm install --production  
+npm WARN engine html-to-text@1.2.0: wanted: {"node":"&amp;gt;= 0.8.0 &amp;lt;0.12"} (current: {"node":"0.12.0","npm":"2.5.1"})
+
+&amp;gt; sqlite3@3.0.5 install /private/tmp/blog/ghost/node_modules/sqlite3
+&amp;gt; node-pre-gyp install --fallback-to-build
+[... много текста ...]
+sqlite3@3.0.5 node_modules/sqlite3  
+└── nan@1.6.2
+
+ddr@Vitalys-MacBook-Pro /tmp/blog/ghost $ npm start
+
+&amp;gt; ghost@0.5.10 start /private/tmp/blog/ghost
+&amp;gt; node index
+
+Migrations: Database initialisation required for version 003  
+Migrations: Creating tables...  
+Migrations: Creating table: posts  
+Migrations: Creating table: users  
+Migrations: Creating table: roles  
+Migrations: Creating table: roles_users  
+Migrations: Creating table: permissions  
+Migrations: Creating table: permissions_users  
+Migrations: Creating table: permissions_roles  
+Migrations: Creating table: permissions_apps  
+Migrations: Creating table: settings  
+Migrations: Creating table: tags  
+Migrations: Creating table: posts_tags  
+Migrations: Creating table: apps  
+Migrations: Creating table: app_settings  
+Migrations: Creating table: app_fields  
+Migrations: Creating table: clients  
+Migrations: Creating table: accesstokens  
+Migrations: Creating table: refreshtokens  
+Migrations: Populating fixtures  
+Migrations: Populating permissions  
+Migrations: Creating owner  
+Migrations: Populating default settings  
+Migrations: Complete
+
+Ghost is running in development...  
+Listening on 127.0.0.1:2368  
+Url configured as: http://localhost:2368/  
+Ctrl+C to shut down  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="githubpages"&gt;Загрузка на GitHub Pages&lt;/h4&gt;
+
+&lt;p&gt;Сперва я хотел уже заказывать сервер на &lt;a href="https://www.digitalocean.com/?refcode=632349684665"&gt;DigitalOcean&lt;/a&gt;, но черт меня дернул загуглить размещение блога ghost на гитхабе. И я нашел небольшой хак на питоне &lt;a href="https://github.com/axitkhurana/buster"&gt;Buster&lt;/a&gt;, который парсит сайт и генерирует статические страниы для загрузки на GitHub Pages. 
+Для бастера нужны wget и git.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Устанавливаем бастера &lt;code&gt;pip install buster&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Создаем директорию для репозитория блога&lt;/li&gt;
+&lt;li&gt;На гитхабе создаем репозиторий для блога&lt;/li&gt;
+&lt;li&gt;Подготваливаем локальный репозиторий бастера &lt;code&gt;buster setup --gh-repo=&amp;lt;git_repo&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Генерируем статику &lt;code&gt;buster generate --domain=localhost:2368&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Заливаем на гитхаб &lt;code&gt;buster deploy&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;ddr@Vitalys-MacBook-Pro ~ $ mkdir /tmp/blog-git  
+ddr@Vitalys-MacBook-Pro ~ $ cd /tmp/blog-git  
+ddr@Vitalys-MacBook-Pro /tmp/blog-git $ buster setup --gh-repo="git@github.com:dragolabs/dragolabs.github.io.git"  
+ddr@Vitalys-MacBook-Pro /tmp/blog-git $ buster generate --domain=http://127.0.0.1:2368  
+-2015-03-25 12:17:50--  http://127.0.0.1:2368/
+Connecting to 127.0.0.1:2368... connected.  
+HTTP request sent, awaiting response... 200 OK  
+Length: 4663 (4.6K) [text/html]  
+Saving to: '/private/tmp/2/static/index.html'  
+[... много текста ...]
+fixing links in  /private/tmp/2/static/rss/index.rss  
+ddr@Vitalys-MacBook-Pro /tmp/blog-git $ buster deploy  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=""&gt;Подсветка синтаксиса&lt;/h4&gt;
+
+&lt;p&gt;Есть много вариантов включения подсветки кода. Подсветка есть в некоторых темах, можно подключить скрипт от гугла. Мне больше всего приглянулись два варианта.&lt;/p&gt;
+
+&lt;h6 id="highlightsjs"&gt;Highlights.js&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://highlightjs.org/"&gt;https://highlightjs.org/&lt;/a&gt; &lt;br&gt;
+Написан авторами хабра, знает много языков, имеет много тем, владеет функцией автоопределения языка в блоке кода. Сборка с самыми популярными языками доступна к прямому подключению, ибо выложена на CDN. Его я выбрал для админского хранилища доков, как раз за автоопределение. &lt;/p&gt;
+
+&lt;h6 id="prismjs"&gt;Prism.js&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="http://prismjs.com/"&gt;http://prismjs.com/&lt;/a&gt; &lt;br&gt;
+Легкий, 6 тем, чуть меньше языков, используется кучей популярных проектов. Для подключения надо сгенерировать и залить к себе. В отличие от предыдущего кандидата, имеет подключаемые модули для нумерации и выделения строк, выделения ссылок, подстветки символов итд. Его я выбрал для себя, т.к. его тема мне более симпатична.&lt;/p&gt;
+
+&lt;p&gt;Подключаются оба варианта одинаково. Если не использовать готовый скрипт с CDN, генерируем и скачиваем файлы, и кидаем их в &lt;code&gt;_blog_/content/themes/_theme_name_/assets/css&lt;/code&gt; и &lt;code&gt;_blog_/content/themes/_theme_name_/assets/js&lt;/code&gt; соответственно. В  $theme_name теме, в default.hbs в секции &lt;code&gt;{{! Styles'n'Scripts }}&lt;/code&gt; дописываем подключение css и js. Многие рекомендуют подключать js в самом низу страницы, но у меня и вверху все прекрасно работает.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-markup"&gt;    {{! Styles'n'Scripts }}
+    &amp;lt;link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" /&amp;gt;
+    &amp;lt;link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400" /&amp;gt;
+
+    &amp;lt;link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" /&amp;gt; 
+    &amp;lt;script type="text/javascript" src="{{asset "js/prism.js"}}"&amp;gt;&amp;lt;/script&amp;gt;
+
+    {{! Ghost outputs important style and meta data with this tag }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;В случае highlights.js для автоопределения надо будет подключить еще один js скрипт.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-markup"&gt;    {{! Styles'n'Scripts }}
+    &amp;lt;link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" /&amp;gt;
+    &amp;lt;link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400" /&amp;gt;
+
+    &amp;lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/monokai_sublime.min.css"&amp;gt;
+    &amp;lt;script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;
+
+    {{! Ghost outputs important style and meta data with this tag }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="disqus"&gt;Комментарии Disqus&lt;/h4&gt;
+
+&lt;p&gt;Для подключения комментариев достаточно зарегистрироваться в &lt;a href="http://disqus.com"&gt;Disqus&lt;/a&gt; и вставить кусок кода, как указано в их &lt;a href="https://help.disqus.com/customer/portal/articles/1454924-ghost-installation-instructions"&gt;документации&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=""&gt;Поиск&lt;/h4&gt;
+
+&lt;p&gt;Для статичного сайта поиск актуален больше с помощью гугла, а вот во внутренней документации локальный поиск просто необходим. Подключать его не столько трудно, сколько геморно его более-менее красиво вставить.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Топаем на &lt;a href="https://github.com/jamalneufeld/ghostHunter"&gt;https://github.com/jamalneufeld/ghostHunter&lt;/a&gt; и качаем архив с полезным js скриптом&lt;/li&gt;
+&lt;li&gt;Минимизированный js скидываем в уже знакомый каталог &lt;code&gt;_blog_/content/themes/_theme_name_/assets/js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;В $theme_name в default.hbs в перед &lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt; подлючаем наш js.&lt;/li&gt;
+&lt;li&gt;И в понравившемся нам месте размещаем поле и кнопку поиска, и секцию для вывода результатов.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;form&amp;gt;  
+  &amp;lt;input id="search-field" /&amp;gt;
+  &amp;lt;input type="submit" value="search"&amp;gt;
+&amp;lt;/form&amp;gt;
+
+&amp;lt;section id="results"&amp;gt;&amp;lt;/section&amp;gt;
+
+$("#search-field").ghostHunter({
+  results   : "#results"
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;В принципе, на этом можно остановиться, но общий вид меня удручал, так что я убрал вообще кнопку поиска, облагородил поле ввода и перенес поле и вывод результата наверх. И добавил эти поля во все шаблоны (пост, тэг, индекс) вместо использования одного только default, где можно вставить поле либо над лого, либо ниже футера.&lt;/p&gt;
+
+&lt;p&gt;default.hbs  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-markup"&gt;    {{! The main JavaScript file for Casper }}
+    &amp;lt;script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type="text/javascript" src="{{asset "js/index.js"}}"&amp;gt;&amp;lt;/script&amp;gt;
+
+    &amp;lt;script src="{{asset "js/jquery.ghostHunter.min.js"}}"&amp;gt;&amp;lt;/script&amp;gt;
+
+    &amp;lt;script&amp;gt;
+        $("#search-field").ghostHunter({
+            results   : "#results"
+        });
+    &amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;index.hbs  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-markup"&gt;&amp;lt;/header&amp;gt;
+
+
+&amp;lt;form class="site-search"&amp;gt;  
+    &amp;lt;input type="search" id="search-field" placeholder="Search" class="search-box" /&amp;gt;
+&amp;lt;/form&amp;gt;  
+&amp;lt;section id="results" class="search-results"&amp;gt;&amp;lt;/section&amp;gt;
+
+{{! The main content area on the homepage }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;screen.css  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-css"&gt;.search-box{
+    width: 250px;
+    float: right;
+    display: block;
+    font-size: 1.8rem;
+    margin-right: 10px;
+}
+.search-results{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    background: #eee;
+    max-width: 870px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id="forever"&gt;Запуск через forever&lt;/h4&gt;
+
+&lt;p&gt;Запускать сервер через &lt;code&gt;npm start&lt;/code&gt; хорошо, когда все ограничивается локальным компом. На сервере же управление процессом лучше доверить какому-нибудь демону. Вариантов масса: написать init скрипт, настроить runit, supervisord, forever, &lt;a href="https://github.com/Unitech/pm2"&gt;pm2&lt;/a&gt;. Я решил пока не заморачиваться, и использовать forever для хранилища доков. Для боевого сервера лучше использовать pm2, т.к. он умеет и генерить init скрипты, и мониторить процессы и что только.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ставим forever &lt;code&gt;npm install forever -g&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;под юзером проекта в проектном каталоге запускаем сервер &lt;code&gt;sudo -u ghost NODE_ENV=production forever start index.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;чтобы перезапустить ghost, можно сделать так &lt;code&gt;sudo -u ghost forever restartall&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;чтобы блог запустился после рестарта системы, можно сделать init скрипт или дописать в &lt;code&gt;/etc/rc.local&lt;/code&gt; команду запуска сервера&lt;/li&gt;
+&lt;/ul&gt;</description><link>http://blog.dragolabs.org/2015/03/25/blogh-na-ghost/</link><guid isPermaLink="false">e2789f25-a126-4b61-baac-487994598307</guid><dc:creator>ddr</dc:creator><pubDate>Wed, 25 Mar 2015 09:42:43 GMT</pubDate></item><item><title>Первый день на новом маке</title><description>&lt;img src="https://farm4.staticflickr.com/3907/14444161651_59abed46f0_h.jpg" alt="Первый день на новом маке"&gt;&lt;p&gt;Наконец-то сбылась мечта идиота, и я стал флегматичным обладателем цельного куска анодированного аллюминия с примесями стекла. До этого уже успешно использовался хакинтош, построенный на гигабайтовской материнке, так что никаких проблем с переходом не ожидалось. На мак я перешел с винды по простой причине - для админства мне сейчас гораздо удобнее использовать *nix системы, а убунта, несмотря на ее юзабельность, проигрывает по части окружения. Нет в линуксе ни evernote, ни нормального скайпа. Там вообще для гуи мало чего путного. Мак, в свою очередь, тоже не лишен идиотизма и "оригинальных" решений. Однако же, по сравнению с той же убунтой, он много няшнее.&lt;/p&gt;
 
 &lt;p&gt;Итак, сразу после установки обновлений, я принялся настраивать систему. Что было сделано:&lt;/p&gt;
 
