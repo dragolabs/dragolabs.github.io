@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configuration Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Tue, 14 Apr 2015 17:04:53 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Горячие клавиши</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/Macbook-Keyboard-1920x1200-wide-wallpapers-net.jpg" alt="Горячие клавиши"&gt;&lt;p&gt;Всегда хотел активнее пользоваться сочетаниями клавиш, но все как-то лень было. В итоге, что-то запомнил, что-то каждый раз открываю заново. Так что теперь я решил все более-менее записать. &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configuration Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Tue, 14 Apr 2015 17:08:43 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Горячие клавиши</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/Macbook-Keyboard-1920x1200-wide-wallpapers-net.jpg" alt="Горячие клавиши"&gt;&lt;p&gt;Всегда хотел активнее пользоваться сочетаниями клавиш, но все как-то лень было. В итоге, что-то запомнил, что-то каждый раз открываю заново. Так что теперь я решил все более-менее записать. &lt;/p&gt;
 
 &lt;p&gt;В маке для обозначения сервисных клавиш решили придумать символы. Прикольно выглядит, но насчет удобства я бы поспорил. Изначально я хотел все описать, используя символы, но, посмотрев на результат, решил оставить текстовые обозначения.&lt;/p&gt;
 
@@ -110,13 +110,13 @@ mv Android\ File\ Transfer\ Agent.app Android\ File\ Transfer\ Agent.app.disable
 &lt;li&gt;profit!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;ddr@Vitalys-MacBook-Pro /tmp/blog $ wget https://ghost.org/zip/ghost-0.5.10.zip
+&lt;pre&gt;&lt;code class="language-bash"&gt;vitaly@Vitalys-MacBook-Pro /tmp/blog $ wget https://ghost.org/zip/ghost-0.5.10.zip
 
-ddr@Vitalys-MacBook-Pro /tmp/blog $ unzip ghost-0.5.10.zip -d ghost
+vitaly@Vitalys-MacBook-Pro /tmp/blog $ unzip ghost-0.5.10.zip -d ghost
 
-ddr@Vitalys-MacBook-Pro /tmp/blog $ cd ghost
+vitaly@Vitalys-MacBook-Pro /tmp/blog $ cd ghost
 
-ddr@Vitalys-MacBook-Pro /tmp/blog/ghost $ npm install --production  
+vitaly@Vitalys-MacBook-Pro /tmp/blog/ghost $ npm install --production  
 npm WARN engine html-to-text@1.2.0: wanted: {"node":"&amp;gt;= 0.8.0 &amp;lt;0.12"} (current: {"node":"0.12.0","npm":"2.5.1"})
 
 &amp;gt; sqlite3@3.0.5 install /private/tmp/blog/ghost/node_modules/sqlite3
@@ -125,7 +125,7 @@ npm WARN engine html-to-text@1.2.0: wanted: {"node":"&amp;gt;= 0.8.0 &amp;lt;0.1
 sqlite3@3.0.5 node_modules/sqlite3  
 └── nan@1.6.2
 
-ddr@Vitalys-MacBook-Pro /tmp/blog/ghost $ npm start
+vitaly@Vitalys-MacBook-Pro /tmp/blog/ghost $ npm start
 
 &amp;gt; ghost@0.5.10 start /private/tmp/blog/ghost
 &amp;gt; node index
@@ -175,10 +175,10 @@ Ctrl+C to shut down
 &lt;li&gt;Заливаем на гитхаб &lt;code&gt;buster deploy&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;ddr@Vitalys-MacBook-Pro ~ $ mkdir /tmp/blog-git  
-ddr@Vitalys-MacBook-Pro ~ $ cd /tmp/blog-git  
-ddr@Vitalys-MacBook-Pro /tmp/blog-git $ buster setup --gh-repo="git@github.com:dragolabs/dragolabs.github.io.git"  
-ddr@Vitalys-MacBook-Pro /tmp/blog-git $ buster generate --domain=http://127.0.0.1:2368  
+&lt;pre&gt;&lt;code class="language-bash"&gt;vitaly@Vitalys-MacBook-Pro ~ $ mkdir /tmp/blog-git  
+vitaly@Vitalys-MacBook-Pro ~ $ cd /tmp/blog-git  
+vitaly@Vitalys-MacBook-Pro /tmp/blog-git $ buster setup --gh-repo="git@github.com:dragolabs/dragolabs.github.io.git"  
+vitaly@Vitalys-MacBook-Pro /tmp/blog-git $ buster generate --domain=http://127.0.0.1:2368  
 -2015-03-25 12:17:50--  http://127.0.0.1:2368/
 Connecting to 127.0.0.1:2368... connected.  
 HTTP request sent, awaiting response... 200 OK  
@@ -186,7 +186,7 @@ Length: 4663 (4.6K) [text/html]
 Saving to: '/private/tmp/2/static/index.html'  
 [... много текста ...]
 fixing links in  /private/tmp/2/static/rss/index.rss  
-ddr@Vitalys-MacBook-Pro /tmp/blog-git $ buster deploy  
+vitaly@Vitalys-MacBook-Pro /tmp/blog-git $ buster deploy  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=""&gt;Подсветка синтаксиса&lt;/h4&gt;
@@ -322,20 +322,20 @@ $("#search-field").ghostHunter({
 
 &lt;p&gt;Для публикации блога на GitHUb Pages можно воспользоваться прекрасным питоновским приложением, которое распарсит локальный сайт, закоммитит в репозиторий и запушит на сервер.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;ddr@Vitalys-MacBook-Pro ~$ sudo easy_install pip  
-ddr@Vitalys-MacBook-Pro ~$ sudo pip install buster  
+&lt;pre&gt;&lt;code class="language-bash"&gt;vitaly@Vitalys-MacBook-Pro ~$ sudo easy_install pip  
+vitaly@Vitalys-MacBook-Pro ~$ sudo pip install buster  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Далее можно использовать следующие команды:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class="language-bash"&gt;# Создание нового репозитория для блога
-ddr@Vitalys-MacBook-Pro ~$ buster setup
+vitaly@Vitalys-MacBook-Pro ~$ buster setup
 
 # Генерируем статичную версию сайта
-ddr@Vitalys-MacBook-Pro ~$ buster generate --domain=http://127.0.0.1:2368
+vitaly@Vitalys-MacBook-Pro ~$ buster generate --domain=http://127.0.0.1:2368
 
 # Пушим изменения на гит-сервер
-ddr@Vitalys-MacBook-Pro ~$ buster deploy  
+vitaly@Vitalys-MacBook-Pro ~$ buster deploy  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Но, оказывается, buster не умеет пока сливать sitemap файлы. В итоге, на просторах интернета я наткнулся на скриптик для генерации и заливки сайта. Взял отсюда: &lt;a href="http://joshgerdes.com/host-a-static-ghost-blog-on-github/"&gt;http://joshgerdes.com/host-a-static-ghost-blog-on-github/&lt;/a&gt;&lt;/p&gt;
@@ -374,7 +374,7 @@ buster deploy
 &lt;li&gt;поменял хостнейм на нормальный. За каким-то чудом, мощный и брутальный MacBook Pro решил обозвать себя в консоли не иначе, как "air-ekaterina.office". Я, конечно, понимаю, что бук, скорее всего, был сбит с толку наглым DHCP сервером, но менять свое имя на Катю я как-то не спешил. Поэтому пришлось нагуглить, как поменять хостнейм в маке. Как выяснилось, линуксовый прием "поменяй хост в файлике" тут не прокатывает.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class="language-bash"&gt;sudo scutil --set HostName ddr-pro.local  
+&lt;pre&gt;&lt;code class="language-bash"&gt;sudo scutil --set HostName vitaly-macbook-pro.local  
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
