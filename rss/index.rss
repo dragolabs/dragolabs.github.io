@@ -1,4 +1,81 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configuration Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Thu, 09 Apr 2015 13:59:52 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>USB-хаб, макбук и Android File Transfer</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/2015-04-09-16-54-49.jpg" alt="USB-хаб, макбук и Android File Transfer"&gt;&lt;p&gt;Скорость офисного вай-фая никогда меня особо не радовала – слишком много разношерстных клиентов на наших немногочисленных тарелках висит. Я все мечтаю о док-станции для бука, наподобие &lt;a href="http://www.belkin.com/us/F4U085-Belkin/p/P-F4U085/"&gt;Thunderbolt™ 2 Express&lt;/a&gt;. Но пока приходится перебиваться хабами и USB сетевухами не яблочного производства. &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configuration Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Tue, 14 Apr 2015 16:39:31 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Горячие клавиши</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/Macbook-Keyboard-1920x1200-wide-wallpapers-net.jpg" alt="Горячие клавиши"&gt;&lt;p&gt;Всегда хотел активнее пользоваться сочетаниями клавиш, но все как-то лень было. В итоге, что-то запомнил, что-то каждый раз открываю заново. Так что теперь я решил все более-менее записать. &lt;/p&gt;
+
+&lt;p&gt;В маке для обозначения сервисных клавиш решили придумать символы. Прикольно выглядит, но насчет удобства я бы поспорил. Изначально я хотел все описать, используя символы, но, посмотрев на результат, решил оставить текстовые обозначения.&lt;/p&gt;
+
+&lt;p&gt;Сами символы выглядят так:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;⌥ – alt (option)&lt;/li&gt;
+&lt;li&gt;⌘ – cmd (command)&lt;/li&gt;
+&lt;li&gt;⇧ – shift &lt;/li&gt;
+&lt;li&gt;⌃ – ctrl&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="terminalbash"&gt;Terminal (bash)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;fn + left\right – в начало\конец строки&lt;/li&gt;
+&lt;li&gt;ctrl + A\E – в начало\конец строки&lt;/li&gt;
+&lt;li&gt;ctrl + D – удаляет символ справа от курсора&lt;/li&gt;
+&lt;li&gt;ctrl + U – удаляет строку&lt;/li&gt;
+&lt;li&gt;ctrl + K – удаляет все справа от курсора&lt;/li&gt;
+&lt;li&gt;ctrl + W – удаляет все слева от курсора&lt;/li&gt;
+&lt;li&gt;ctrl + R – интерактивный поиск по истории команд&lt;/li&gt;
+&lt;li&gt;ctrl + T – меняет местами последние два символа&lt;/li&gt;
+&lt;li&gt;esc + T –  меняет местами последние два слова&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="sublimetext"&gt;Sublime Text&lt;/h2&gt;
+
+&lt;h4 id=""&gt;Выделение&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cmd + L – выделение всей строки&lt;/li&gt;
+&lt;li&gt;cmd + D – поиск и выделение для одновременного редактирования&lt;/li&gt;
+&lt;li&gt;cmd + G – следующий одиночный результат в поиске&lt;/li&gt;
+&lt;li&gt;ctrl + cmd + G – поиск и одновременное редактирование всех найденных частей текста&lt;/li&gt;
+&lt;li&gt;cmd + shift + J – выделение всех дочерних элементов в блоке&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=""&gt;Выравнивание&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ctrl + cmd + up\down – перенос строки вверх\вниз&lt;/li&gt;
+&lt;li&gt;ctrl + cmd + A – выравниваение кода &lt;/li&gt;
+&lt;li&gt;cmd + shift + D – дублировать текущую строку&lt;/li&gt;
+&lt;li&gt;cmd + j – добавить к текущей строке следующую&lt;/li&gt;
+&lt;li&gt;cmd + / – комментрировать\раскомментировать&lt;/li&gt;
+&lt;li&gt;cmd + K + B – свернуть\показать сайдбар&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=""&gt;Редактирование&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ctrl + backspace – удалить слово слева от курсора&lt;/li&gt;
+&lt;li&gt;ctrl + del(fn + backspace) – удалить слова справа от курсора &lt;/li&gt;
+&lt;li&gt;cmd + backspace – удалить все от курсора до начала строки&lt;/li&gt;
+&lt;li&gt;cmd + K + K – удалить все от крусора до конца строки&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=""&gt;Прочее&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cmd + P (cmd + T) – поиск файла по содержанию&lt;/li&gt;
+&lt;li&gt;cmd + shift + P – внутренние команды&lt;/li&gt;
+&lt;li&gt;ctrl + cmd + P – переключение между проектами&lt;/li&gt;
+&lt;li&gt;cmd + shift + T – запуск терминала в каталоге файла&lt;/li&gt;
+&lt;li&gt;cmd + shift + alt + T – запуск терминала в каталоге проекта&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="osx"&gt;OS X и везде&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cmd + left\right – в начало\конец строки (в iTerm работает для переключения табов)&lt;/li&gt;
+&lt;li&gt;cmd + ` – переключение между окнами одного приложения&lt;/li&gt;
+&lt;li&gt;alt + left\right – перемещает курсор на слово влево\вправо (в iTerm в Preferences/Profile/Keys надо прописать значения Esc+f\Esc+b)&lt;/li&gt;
+&lt;li&gt;alt + cmd + left\right – переключение между табами&lt;/li&gt;
+&lt;li&gt;ctrl + tab (+ shift) – переключение между табами&lt;/li&gt;
+&lt;/ul&gt;</description><link>http://blog.dragolabs.org/2015/04/13/shortcuts/</link><guid isPermaLink="false">68e49dae-a28c-46bc-8a4f-6553af74d1d0</guid><category>shortcuts</category><category>sublime text</category><category>os</category><category>terminal</category><dc:creator>ddr</dc:creator><pubDate>Mon, 13 Apr 2015 14:18:00 GMT</pubDate></item><item><title>USB-хаб, макбук и Android File Transfer</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/2015-04-09-16-54-49.jpg" alt="USB-хаб, макбук и Android File Transfer"&gt;&lt;p&gt;Скорость офисного вай-фая никогда меня особо не радовала – слишком много разношерстных клиентов на наших немногочисленных тарелках висит. Я все мечтаю о док-станции для бука, наподобие &lt;a href="http://www.belkin.com/us/F4U085-Belkin/p/P-F4U085/"&gt;Thunderbolt™ 2 Express&lt;/a&gt;. Но пока приходится перебиваться хабами и USB сетевухами не яблочного производства. &lt;/p&gt;
 
 &lt;p&gt;&lt;img src="https://farm8.staticflickr.com/7725/17086804012_b7c404ec9e_c.jpg" alt="USB-хаб, макбук и Android File Transfer"&gt;
 После установки дров для D-Link DUB-E100, все, вроде бы, работало. До отключения девайса. Как только хаб или саму сетевуху вытаскиваешь из бука, тот либо перестает реагировать на тачпад и клавиатуру, либо вовсе фризится. Помогает в таком случае только жестокий ребут машинки. После непродолжительного гуглинга выявился кандидат на получение по шапке. Им оказался Android File Transfer. Оказалось, что эта приблуда запускает своего агента, который отлавливает все USB девайсы, и это далеко не всегда проходит без последствий. Для решения проблемы совсем не обязательно удалять полезную утилитку, достаточно ампутировать сам агент. 
