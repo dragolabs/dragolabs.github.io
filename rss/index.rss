@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configuration Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Tue, 14 Apr 2015 16:39:31 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Горячие клавиши</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/Macbook-Keyboard-1920x1200-wide-wallpapers-net.jpg" alt="Горячие клавиши"&gt;&lt;p&gt;Всегда хотел активнее пользоваться сочетаниями клавиш, но все как-то лень было. В итоге, что-то запомнил, что-то каждый раз открываю заново. Так что теперь я решил все более-менее записать. &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>dragolabs</title><description>DevOps, Configuration Management, Сontinuous Integration и много других страшных слов</description><link>http://blog.dragolabs.org/</link><generator>Ghost 0.5</generator><lastBuildDate>Tue, 14 Apr 2015 16:51:02 GMT</lastBuildDate><atom:link href="http://blog.dragolabs.org/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Горячие клавиши</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/Macbook-Keyboard-1920x1200-wide-wallpapers-net.jpg" alt="Горячие клавиши"&gt;&lt;p&gt;Всегда хотел активнее пользоваться сочетаниями клавиш, но все как-то лень было. В итоге, что-то запомнил, что-то каждый раз открываю заново. Так что теперь я решил все более-менее записать. &lt;/p&gt;
 
 &lt;p&gt;В маке для обозначения сервисных клавиш решили придумать символы. Прикольно выглядит, но насчет удобства я бы поспорил. Изначально я хотел все описать, используя символы, но, посмотрев на результат, решил оставить текстовые обозначения.&lt;/p&gt;
 
@@ -92,7 +92,7 @@ cd /Applications/Android\ File\ Transfer.app/Contents/Resources
 mv Android\ File\ Transfer\ Agent.app Android\ File\ Transfer\ Agent.app.disable  
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;На этом все. После этого никаких зависаний или игнорирования клавиатуры.&lt;/p&gt;</description><link>http://blog.dragolabs.org/2015/04/09/usb-khab-makbuk-i-android-file-transfer/</link><guid isPermaLink="false">134ab34c-b621-46f2-af5d-e84b8bd5755e</guid><category>osx</category><category>tips</category><category>mac</category><dc:creator>ddr</dc:creator><pubDate>Thu, 09 Apr 2015 13:52:58 GMT</pubDate></item><item><title>Блог на Ghost</title><description>&lt;p&gt;С блогами у меня всегда что-то не получалось — то лень, то страшный, то неудобный. Я пробовал и &lt;a href="http://dragolabs.livejournal.com"&gt;ЖЖ&lt;/a&gt;, и &lt;a href="http://dragolabs.tumblr.com/"&gt;тумблер&lt;/a&gt;, и даже &lt;a href="http://blogspot.com"&gt;blogspot&lt;/a&gt;. Потом наткнулся на octopress, который сразу понравился своим минимализмом. Он красив, шустр, можно размещать на халявном GitHub Pages. Но он давно не обновлялся и немного загонен. Не так сильно, как его предок Jekyll, но все же кодерских действий в нем, как в обычном проекте. &lt;/p&gt;
+&lt;p&gt;На этом все. После этого никаких зависаний или игнорирования клавиатуры.&lt;/p&gt;</description><link>http://blog.dragolabs.org/2015/04/09/usb-khab-makbuk-i-android-file-transfer/</link><guid isPermaLink="false">134ab34c-b621-46f2-af5d-e84b8bd5755e</guid><category>osx</category><category>tips</category><category>mac</category><dc:creator>ddr</dc:creator><pubDate>Thu, 09 Apr 2015 13:52:58 GMT</pubDate></item><item><title>Блог на Ghost</title><description>&lt;img src="http://blog.dragolabs.org/content/images/2015/04/Ghost-Platform.jpg" alt="Блог на Ghost"&gt;&lt;p&gt;С блогами у меня всегда что-то не получалось — то лень, то страшный, то неудобный. Я пробовал и &lt;a href="http://dragolabs.livejournal.com"&gt;ЖЖ&lt;/a&gt;, и &lt;a href="http://dragolabs.tumblr.com/"&gt;тумблер&lt;/a&gt;, и даже &lt;a href="http://blogspot.com"&gt;blogspot&lt;/a&gt;. Потом наткнулся на octopress, который сразу понравился своим минимализмом. Он красив, шустр, можно размещать на халявном GitHub Pages. Но он давно не обновлялся и немного загонен. Не так сильно, как его предок Jekyll, но все же кодерских действий в нем, как в обычном проекте. &lt;/p&gt;
 
 &lt;p&gt;Так что с блогами у меня не вязалось. Но сохранять описания своих действий все же хочется, поэтому я снова вдарился в поиски. В критериях были простота, удобство и поддержка markdown. Тут-то я наткнулся на &lt;a href="http://ghost.org"&gt;Ghost&lt;/a&gt;. Поднимается он легко, базу особо не требует. А тут еще нашел генератор статики из него, чтобы можно было заливать сайт на гитхаб. Он мне так понравился, что теперь мы даже используем его в админском отделе в качестве хранилища документации. Множество википедий у нас не шло так же, как у меня блог сервисы. Ниже опишу основные моменты, с которыми я имел дело при настройке.&lt;/p&gt;
 
@@ -316,7 +316,57 @@ $("#search-field").ghostHunter({
 &lt;li&gt;под юзером проекта в проектном каталоге запускаем сервер &lt;code&gt;sudo -u ghost NODE_ENV=production forever start index.js&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;чтобы перезапустить ghost, можно сделать так &lt;code&gt;sudo -u ghost forever restartall&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;чтобы блог запустился после рестарта системы, можно сделать init скрипт или дописать в &lt;code&gt;/etc/rc.local&lt;/code&gt; команду запуска сервера&lt;/li&gt;
-&lt;/ul&gt;</description><link>http://blog.dragolabs.org/2015/03/25/blogh-na-ghost/</link><guid isPermaLink="false">e2789f25-a126-4b61-baac-487994598307</guid><dc:creator>ddr</dc:creator><pubDate>Wed, 25 Mar 2015 09:42:43 GMT</pubDate></item><item><title>Первый день на новом маке</title><description>&lt;img src="https://farm4.staticflickr.com/3907/14444161651_59abed46f0_h.jpg" alt="Первый день на новом маке"&gt;&lt;p&gt;Наконец-то сбылась мечта идиота, и я стал флегматичным обладателем цельного куска анодированного аллюминия с примесями стекла. До этого уже успешно использовался хакинтош, построенный на гигабайтовской материнке, так что никаких проблем с переходом не ожидалось. На мак я перешел с винды по простой причине - для админства мне сейчас гораздо удобнее использовать *nix системы, а убунта, несмотря на ее юзабельность, проигрывает по части окружения. Нет в линуксе ни evernote, ни нормального скайпа. Там вообще для гуи мало чего путного. Мак, в свою очередь, тоже не лишен идиотизма и "оригинальных" решений. Однако же, по сравнению с той же убунтой, он много няшнее.&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="buster"&gt;Buster&lt;/h2&gt;
+
+&lt;p&gt;Для публикации блога на GitHUb Pages можно воспользоваться прекрасным питоновским приложением, которое распарсит локальный сайт, закоммитит в репозиторий и запушит на сервер.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;ddr@Vitalys-MacBook-Pro ~$ sudo easy_install pip  
+ddr@Vitalys-MacBook-Pro ~$ sudo pip install buster  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Далее можно использовать следующие команды:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;# Создание нового репозитория для блога
+ddr@Vitalys-MacBook-Pro ~$ buster setup
+
+# Генерируем статичную версию сайта
+ddr@Vitalys-MacBook-Pro ~$ buster generate --domain=http://127.0.0.1:2368
+
+# Пушим изменения на гит-сервер
+ddr@Vitalys-MacBook-Pro ~$ buster deploy  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Но, оказывается, buster не умеет пока сливать sitemap файлы. В итоге, на просторах интернета я наткнулся на скриптик для генерации и заливки сайта. Взял отсюда: &lt;a href="http://joshgerdes.com/host-a-static-ghost-blog-on-github/"&gt;http://joshgerdes.com/host-a-static-ghost-blog-on-github/&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;#!/bin/bash
+
+# Generate static files with buster
+buster generate --domain=http://127.0.0.1:2368
+
+# Copy sitemap files
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap.xsl  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-pages.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-posts.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-authors.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-tags.xml
+
+# Replace urls that were missed by buster
+find static/* -name robots.txt -type f -exec sed -i '' 's#http://blog.dragolabs.org#http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.xsl -type f -exec sed -i '' 's#http://blog.dragolabs.org#http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.xml -type f -exec sed -i '' 's#loc&amp;gt;http://blog.dragolabs.org#loc&amp;gt;http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#u=http://blog.dragolabs.org#u=http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#url=http://blog.dragolabs.org#url=http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#href="http://blog.dragolabs.org#href="http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#src="http://blog.dragolabs.org#src="http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#link&amp;gt;http://blog.dragolabs.org#link&amp;gt;http://blog.dragolabs.org#g' {} \;
+
+# Add CNAME file for github pages
+buster add-domain blog.dragolabs.org  
+buster deploy  
+&lt;/code&gt;&lt;/pre&gt;</description><link>http://blog.dragolabs.org/2015/03/25/blogh-na-ghost/</link><guid isPermaLink="false">e2789f25-a126-4b61-baac-487994598307</guid><category>blog</category><category>ghost</category><dc:creator>ddr</dc:creator><pubDate>Wed, 25 Mar 2015 09:42:43 GMT</pubDate></item><item><title>Первый день на новом маке</title><description>&lt;img src="https://farm4.staticflickr.com/3907/14444161651_59abed46f0_h.jpg" alt="Первый день на новом маке"&gt;&lt;p&gt;Наконец-то сбылась мечта идиота, и я стал флегматичным обладателем цельного куска анодированного аллюминия с примесями стекла. До этого уже успешно использовался хакинтош, построенный на гигабайтовской материнке, так что никаких проблем с переходом не ожидалось. На мак я перешел с винды по простой причине - для админства мне сейчас гораздо удобнее использовать *nix системы, а убунта, несмотря на ее юзабельность, проигрывает по части окружения. Нет в линуксе ни evernote, ни нормального скайпа. Там вообще для гуи мало чего путного. Мак, в свою очередь, тоже не лишен идиотизма и "оригинальных" решений. Однако же, по сравнению с той же убунтой, он много няшнее.&lt;/p&gt;
 
 &lt;p&gt;Итак, сразу после установки обновлений, я принялся настраивать систему. Что было сделано:&lt;/p&gt;
 
@@ -360,4 +410,4 @@ $ echo $BASH_VERSION
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;поставил просто кучку полезных программ&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;ну и поставил русскую раскладку от PC, ибо маковская дико бесит. И плевать, что раскладка расходится с нарисованным на кнопках.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><link>http://blog.dragolabs.org/2014/10/01/pervyi-den-na-novom-make/</link><guid isPermaLink="false">0d74c43f-6175-4597-80f6-9c9876427a41</guid><dc:creator>ddr</dc:creator><pubDate>Wed, 01 Oct 2014 20:13:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><link>http://blog.dragolabs.org/2014/10/01/pervyi-den-na-novom-make/</link><guid isPermaLink="false">0d74c43f-6175-4597-80f6-9c9876427a41</guid><category>osx</category><dc:creator>ddr</dc:creator><pubDate>Wed, 01 Oct 2014 20:13:00 GMT</pubDate></item></channel></rss>

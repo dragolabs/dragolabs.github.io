@@ -22,13 +22,17 @@
     <meta property="og:title" content="Блог на Ghost">
     <meta property="og:description" content="С блогами у меня всегда что-то не получалось — то лень, то страшный, то неудобный. Я пробовал и ЖЖ, и тумблер, и даже blogspot. Потом наткнулся на octopress, который сразу понравился своим минимализмом. Он красив, шустр, можно размещать на халявном GitHub...">
     <meta property="og:url" content="http://blog.dragolabs.org/2015/03/25/blogh-na-ghost/">
+    <meta property="og:image" content="http://blog.dragolabs.org/content/images/2015/04/Ghost-Platform.jpg">
     <meta property="article:published_time" content="2015-03-25T09:42:43.386Z">
-    <meta property="article:modified_time" content="2015-03-25T12:18:17.139Z">
+    <meta property="article:modified_time" content="2015-04-14T16:49:55.666Z">
+    <meta property="article:tag" content="blog">
+    <meta property="article:tag" content="ghost">
     
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Блог на Ghost">
     <meta name="twitter:description" content="С блогами у меня всегда что-то не получалось — то лень, то страшный, то неудобный. Я пробовал и ЖЖ, и тумблер, и даже blogspot. Потом наткнулся на octopress, который сразу понравился своим минимализмом. Он красив, шустр, можно размещать на халявном GitHub...">
     <meta name="twitter:url" content="http://blog.dragolabs.org/2015/03/25/blogh-na-ghost/">
+    <meta name="twitter:image:src" content="http://blog.dragolabs.org/content/images/2015/04/Ghost-Platform.jpg">
     
     <script type="application/ld+json">
 {
@@ -45,7 +49,9 @@
     "headline": "Блог на Ghost",
     "url": "http://blog.dragolabs.org/2015/03/25/blogh-na-ghost/",
     "datePublished": "2015-03-25T09:42:43.386Z",
-    "dateModified": "2015-03-25T12:18:17.139Z",
+    "dateModified": "2015-04-14T16:49:55.666Z",
+    "image": "http://blog.dragolabs.org/content/images/2015/04/Ghost-Platform.jpg",
+    "keywords": "blog, ghost",
     "description": "С блогами у меня всегда что-то не получалось — то лень, то страшный, то неудобный. Я пробовал и ЖЖ, и тумблер, и даже blogspot. Потом наткнулся на octopress, который сразу понравился своим минимализмом. Он красив, шустр, можно размещать на халявном GitHub..."
 }
     </script>
@@ -63,7 +69,7 @@
 
 </script>
 </head>
-<body class="post-template nav-closed">
+<body class="post-template tag-blog tag-ghost-tag nav-closed">
 
     <div class="nav">
     <h3 class="nav-title">Menu</h3>
@@ -83,20 +89,20 @@
         
 
 
-<header class="main-header post-head no-cover">
-    <nav class="main-nav  clearfix">
+<header class="main-header post-head " style="background-image: url(../../../../content/images/2015/04/Ghost-Platform.jpg)">
+    <nav class="main-nav overlay clearfix">
         
             <a class="menu-button" href="index.html#"><span class="burger">☰</span><span class="word">Menu</span></a>
     </nav>
 </header>
 
 <main class="content" role="main">
-    <article class="post">
+    <article class="post tag-blog tag-ghost-tag">
 
         <header class="post-header">
             <h1 class="post-title">Блог на Ghost</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2015-03-25">25 March 2015</time> 
+                <time class="post-date" datetime="2015-03-25">25 March 2015</time>  on <a href="../../../../tag/blog/">blog</a>, <a href="../../../../tag/ghost-tag/">ghost</a>
             </section>
         </header>
 
@@ -326,6 +332,56 @@ $("#search-field").ghostHunter({
 <li>чтобы перезапустить ghost, можно сделать так <code>sudo -u ghost forever restartall</code></li>
 <li>чтобы блог запустился после рестарта системы, можно сделать init скрипт или дописать в <code>/etc/rc.local</code> команду запуска сервера</li>
 </ul>
+
+<h2 id="buster">Buster</h2>
+
+<p>Для публикации блога на GitHUb Pages можно воспользоваться прекрасным питоновским приложением, которое распарсит локальный сайт, закоммитит в репозиторий и запушит на сервер.</p>
+
+<pre><code class="language-bash">ddr@Vitalys-MacBook-Pro ~$ sudo easy_install pip  
+ddr@Vitalys-MacBook-Pro ~$ sudo pip install buster  
+</code></pre>
+
+<p>Далее можно использовать следующие команды:</p>
+
+<pre><code class="language-bash"># Создание нового репозитория для блога
+ddr@Vitalys-MacBook-Pro ~$ buster setup
+
+# Генерируем статичную версию сайта
+ddr@Vitalys-MacBook-Pro ~$ buster generate --domain=http://127.0.0.1:2368
+
+# Пушим изменения на гит-сервер
+ddr@Vitalys-MacBook-Pro ~$ buster deploy  
+</code></pre>
+
+<p>Но, оказывается, buster не умеет пока сливать sitemap файлы. В итоге, на просторах интернета я наткнулся на скриптик для генерации и заливки сайта. Взял отсюда: <a href="http://joshgerdes.com/host-a-static-ghost-blog-on-github/">http://joshgerdes.com/host-a-static-ghost-blog-on-github/</a></p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+# Generate static files with buster
+buster generate --domain=http://127.0.0.1:2368
+
+# Copy sitemap files
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap.xsl  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-pages.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-posts.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-authors.xml  
+wget --convert-links --page-requisites --no-parent --directory-prefix static --no-host-directories --restrict-file-name=unix http://127.0.0.1:2368/sitemap-tags.xml
+
+# Replace urls that were missed by buster
+find static/* -name robots.txt -type f -exec sed -i '' 's#http://blog.dragolabs.org#http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.xsl -type f -exec sed -i '' 's#http://blog.dragolabs.org#http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.xml -type f -exec sed -i '' 's#loc&gt;http://blog.dragolabs.org#loc&gt;http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#u=http://blog.dragolabs.org#u=http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#url=http://blog.dragolabs.org#url=http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#href="http://blog.dragolabs.org#href="http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#src="http://blog.dragolabs.org#src="http://blog.dragolabs.org#g' {} \;  
+find static/* -name *.html -type f -exec sed -i '' 's#link&gt;http://blog.dragolabs.org#link&gt;http://blog.dragolabs.org#g' {} \;
+
+# Add CNAME file for github pages
+buster add-domain blog.dragolabs.org  
+buster deploy  
+</code></pre>
         </section>
 
         <footer class="post-footer">
